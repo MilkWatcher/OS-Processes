@@ -6,8 +6,9 @@ int main() {
   pid_t pid = fork();
 
 // check if fork() failed
-  if(pid<B){
+  if(pid<0){
     std::cout << "Fork failed!" << std::endl;
+    return 1;
   }
 
 // child process
@@ -17,7 +18,7 @@ int main() {
 
 // parent process
   else{
-        std::cout << "I'm the parent, the child's PID os: " << pid << std::endl;
+        std::cout << "I'm the parent, the child's PID is: " << pid << std::endl;
   }
   return 0;
 }
