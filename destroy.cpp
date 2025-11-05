@@ -22,11 +22,11 @@ int main(){
     sleep(1);  // wait for child to start
 
   // sending kill signal
-    if(kill(pid, SIGTERM)=0){
+    if(kill(pid, SIGTERM)==0){
       std::cout << "Parent - I've sent a SIGTERM to child for pretending to work!" << std::endl;
     }
   wait(NULL);
   std::cout << "Parent - My child is gone D:" << std::endl;
   }
-return -0;
+return 0;
 }
