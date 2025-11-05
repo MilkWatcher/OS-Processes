@@ -11,7 +11,7 @@ int main(){
 // add 5 to nice value to loweer its priority
   if( nice(5) == -1 ){
     std::cout << "Couldn't change the nice value!" << std::endl;
-    retun -1;
+    return -1;
   }
 
 // get the nice value
